@@ -18,7 +18,8 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="index.html" />
+    <Content Include="src\application.css" />
+    <Content Include="src\index.html" />
     <Content Include="web.config" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
