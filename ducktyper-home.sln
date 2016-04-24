@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ducktyper-home", "ducktyper-home\ducktyper-home.csproj", "{F66BDDB9-F313-4181-AD2D-7D2D28264FEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ducktyper-home.Tests", "ducktyper-home.Tests\ducktyper-home.Tests.csproj", "{90734E31-6A1B-48B4-A365-B7D3AB2A1326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F66BDDB9-F313-4181-AD2D-7D2D28264FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66BDDB9-F313-4181-AD2D-7D2D28264FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66BDDB9-F313-4181-AD2D-7D2D28264FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66BDDB9-F313-4181-AD2D-7D2D28264FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90734E31-6A1B-48B4-A365-B7D3AB2A1326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90734E31-6A1B-48B4-A365-B7D3AB2A1326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90734E31-6A1B-48B4-A365-B7D3AB2A1326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90734E31-6A1B-48B4-A365-B7D3AB2A1326}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
