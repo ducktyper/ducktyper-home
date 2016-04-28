@@ -7,8 +7,14 @@ export class ProjectRepo {
   getProjects() {
     return [
       {
+        name:    "Let's Play",
+        details: "Playground for javascript and c#",
+        link: "https://github.com/ducktyper/letsplay"
+      },
+      {
         name:    "Teaching Ruby",
-        details: "Learn ruby from building simple application"
+        details: "Learn ruby from building simple application",
+        link: "https://github.com/ducktyper/countdown"
       }
     ]
   }
