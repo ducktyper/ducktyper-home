@@ -1,8 +1,10 @@
 import {Component} from 'angular2/core'; 
 
+var config = require('../../config/config');
+
 @Component({
   selector: 'footer',
-  templateUrl: 'app/components/footer/footer.html'
+  templateUrl: `${config.assetHost}app/components/footer/footer.html`
 })
 export class Footer {
 }
