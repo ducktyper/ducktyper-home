@@ -6,7 +6,7 @@
     "typings-install": "node node_modules/typings/dist/bin.js install",
     "postinstall": "npm run typings-install",
     "build": "node node_modules/webpack/bin/webpack.js --inline --colors --progress --display-error-details --display-cached --define process.env.NODE_ENV='production'",
-    "deploy": "",
+    "deploy": "node deploy/s3_upload.js",
     "watch": "npm run build -- --watch",
     "server": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --colors --progress --display-error-details --display-cached --port 4010 --content-base src",
     "start": "npm run server"
@@ -22,7 +22,8 @@
     "typings": "^0.7.9",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0",
-    "webpack-merge": "^0.8.4"
+    "webpack-merge": "^0.8.4",
+    "aws-sdk": "^2.3.7"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.15",
