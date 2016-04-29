@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var AWS = require('aws-sdk'); 
+var mime = require('mime');
 AWS.config.region = 'ap-southeast-2';
 
 // Load credential from ~/.aws/credential.js
@@ -30,7 +31,7 @@ fs.readdir(dist, function (err, files) {
     fs.stat(path.join(dist, file), function( error, stat ) {
       if (stat.isFile() && !canIgnore(file)) {
         var filestream = fs.createReadStream(path.join(dist, file));
-        var s3obj = new AWS.S3({params: {Bucket: 'ducktyper', Key: file}});
+        var s3obj = new AWS.S3({params: {Bucket: 'ducktyper', Key: file, ContentType: mime.lookup(file)}});
         s3obj.upload({Body: filestream}).
           send(function(err, data) {process.stdout.write("*");});
       }
@@ -40,6 +41,9 @@ fs.readdir(dist, function (err, files) {
 
 // Deploy css and html files under src folder
 var src = 'src';
+var s3Path = function(fullpath) {
+  return fullpath.replace(/\\/g,"/"); // Support the path separator for windows
+}
 var deployFolderUnderSrc = function(subpath) {
   fs.readdir(path.join(src, subpath), function (err, files) {
     if (err) {
@@ -53,7 +57,7 @@ var deployFolderUnderSrc = function(subpath) {
           deployFolderUnderSrc(fullpath);
         } else if (stat.isFile() && file.match(/.css$|.html$/) != null) {
           var filestream = fs.createReadStream(path.join(src, fullpath));
-          var s3obj = new AWS.S3({params: {Bucket: 'ducktyper', Key: fullpath}});
+          var s3obj = new AWS.S3({params: {Bucket: 'ducktyper', Key: s3Path(fullpath), ContentType: mime.lookup(file)}});
           s3obj.upload({Body: filestream}).
             send(function(err, data) {process.stdout.write("*");});
         }
