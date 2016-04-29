@@ -3,9 +3,11 @@ import {Router, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {ProjectList} from '../project-list/project-list';
 
+var config = require('../../config/config');
+
 @Component({
   selector: 'project-browser',
-  templateUrl: "app/components/project-browser/project-browser.html",
+  templateUrl: `${config.assetHost}app/components/project-browser/project-browser.html`,
   directives: [ROUTER_DIRECTIVES],
 })
 @RouteConfig([

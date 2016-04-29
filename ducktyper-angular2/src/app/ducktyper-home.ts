@@ -5,9 +5,11 @@ import {Header} from './components/header/header';
 import {Footer} from './components/footer/footer';
 import {ProjectBrowser} from './components/project-browser/project-browser';
 
+var config = require('./config/config');
+
 @Component({
   selector: 'ducktyper-home',
-  templateUrl: 'app/ducktyper-home.html',
+  templateUrl: `${config.assetHost}app/ducktyper-home.html`,
   directives: [Header, Footer, ROUTER_DIRECTIVES],
 })
 @RouteConfig([
