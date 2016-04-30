@@ -9,7 +9,7 @@ var config = require('./config/config');
 
 @Component({
   selector: 'ducktyper-home',
-  templateUrl: `${config.assetHost}app/ducktyper-home.html`,
+  template: require("./ducktyper-home.html"),
   directives: [Header, Footer, ROUTER_DIRECTIVES],
 })
 @RouteConfig([

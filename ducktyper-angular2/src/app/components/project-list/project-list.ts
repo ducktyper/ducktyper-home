@@ -7,7 +7,7 @@ var config = require('../../config/config');
 
 @Component({
   selector: 'project',
-  templateUrl: `${config.assetHost}app/components/project-list/project-list.html`,
+  template: require("./project-list.html"),
   styles: [require("./project-list.css")],
   providers: [Title, ProjectRepo],
 })

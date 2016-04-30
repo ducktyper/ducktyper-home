@@ -7,7 +7,7 @@ var config = require('../../config/config');
 
 @Component({
   selector: 'project-browser',
-  templateUrl: `${config.assetHost}app/components/project-browser/project-browser.html`,
+  template: require("./project-browser.html"),
   directives: [ROUTER_DIRECTIVES],
 })
 @RouteConfig([
