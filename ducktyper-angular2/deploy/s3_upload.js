@@ -55,7 +55,7 @@ var deployFolderUnderSrc = function(subpath) {
       fs.stat(path.join(src, fullpath), function( error, stat ) {
         if (stat.isDirectory()) {
           deployFolderUnderSrc(fullpath);
-        } else if (stat.isFile() && file.match(/.css$|.html$/) != null) {
+        } else if (stat.isFile() && file.match(/.html$/) != null) {
           var filestream = fs.createReadStream(path.join(src, fullpath));
           var s3obj = new AWS.S3({params: {Bucket: 'ducktyper', Key: s3Path(fullpath), ContentType: mime.lookup(file)}});
           s3obj.upload({Body: filestream}).

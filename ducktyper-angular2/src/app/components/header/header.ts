@@ -5,7 +5,7 @@ var config = require('../../config/config');
 @Component({
   selector: 'header',
   templateUrl: `${config.assetHost}app/components/header/header.html`,
-  styleUrls: [`${config.assetHost}app/components/header/header.css`],
+  styles: [require("./header.css")],
 })
 export class Header {
 }
