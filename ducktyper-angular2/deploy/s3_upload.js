@@ -39,7 +39,7 @@ fs.readdir(dist, function (err, files) {
   });
 });
 
-// Deploy application.css under src folder
+// Deploy assets (exclude html, css, and ts) under src folder
 var src = 'src';
 var s3Path = function(fullpath) {
   return fullpath.replace(/\\/g,"/"); // Support the path separator for windows
@@ -55,7 +55,7 @@ var deployFolderUnderSrc = function(subpath) {
       fs.stat(path.join(src, fullpath), function( error, stat ) {
         if (stat.isDirectory()) {
           deployFolderUnderSrc(fullpath);
-        } else if (stat.isFile() && file.match(/application.css$/) != null) {
+        } else if (stat.isFile() && file.match(/.jpg$/) != null) {
           var filestream = fs.createReadStream(path.join(src, fullpath));
           var s3obj = new AWS.S3({params: {Bucket: 'ducktyper', Key: s3Path(fullpath), ContentType: mime.lookup(file)}});
           s3obj.upload({Body: filestream}).
