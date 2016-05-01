@@ -17,6 +17,12 @@ export class ProjectList {
 
   ngOnInit() {
     this.title.setTitle("Ducktyper: Product List");
-    this.projects = this.projectRepo.getProjects();
+    this.getProjects();
+  }
+  
+  getProjects() {
+    this.projectRepo
+        .getProjects()
+        .subscribe(projects => this.projects = projects);
   }
 }

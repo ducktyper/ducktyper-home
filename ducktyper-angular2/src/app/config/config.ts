@@ -1,11 +1,13 @@
 let config = {};
 if (process.env.NODE_ENV == 'production') { 
   config = {
-    assetHost: "https://s3-ap-southeast-2.amazonaws.com/ducktyper/"
+    assetHost: "https://s3-ap-southeast-2.amazonaws.com/ducktyper/",
+    apiHost: "http://ducktyper.co.nz/",
   }
 } else {
   config = {
-    assetHost: ""
+    assetHost: "",
+    apiHost: "http://localhost:2281/",
   }
 }
 

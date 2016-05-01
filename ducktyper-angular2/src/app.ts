@@ -5,6 +5,7 @@ import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2
 import {enableProdMode} from 'angular2/core';
 
 import {DucktyperHome} from './app/ducktyper-home';
+import 'rxjs/Rx';
 
 if (process.env.NODE_ENV == 'production') enableProdMode();
 bootstrap(DucktyperHome, [
