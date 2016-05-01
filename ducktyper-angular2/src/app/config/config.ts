@@ -7,7 +7,7 @@ if (process.env.NODE_ENV == 'production') {
 } else {
   config = {
     assetHost: "",
-    apiHost: "http://localhost:2281/",
+    apiHost: "http://localhost:4011/",
   }
 }
 
