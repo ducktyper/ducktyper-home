@@ -10,15 +10,11 @@ namespace ducktyper_home.Controllers
 {
     public class ProjectsController : ApiController
     {
-        Project[] projects = new Project[]
-        {
-            new Project { ID = 1, Name = "Teaching Ruby", Details = "Learn ruby from building simple application", Link = "https://github.com/ducktyper/countdown" },
-            new Project { ID = 2, Name = "Let's Play", Details = "Playground for javascript and c#", Link = "https://github.com/ducktyper/letsplay" }
-        };
+        private DucktyperHomeContext db = new DucktyperHomeContext();
 
         public IEnumerable<Project> GetAllProjects()
         {
-            return projects.OrderByDescending(x => x.ID);
+            return db.Projects.OrderByDescending(x => x.ID);
         }
     }
 }
