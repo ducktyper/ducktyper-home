@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {Title} from 'angular2/platform/browser';
+import {RouterLink} from 'angular2/router';
 
 import {ProjectRepo} from '../../services/project-repo';
 
@@ -8,6 +9,7 @@ import {ProjectRepo} from '../../services/project-repo';
   template: require("./project-list.html"),
   styles: [require("./project-list.css")],
   providers: [Title, ProjectRepo],
+  directives: [RouterLink],
 })
 export class ProjectList {
   projects: Array<any>

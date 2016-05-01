@@ -12,8 +12,10 @@
   <h2>Project List</h2>
   <ul>
     <li class="project" *ngFor="#project of projects">
-      <h3><a [href]="project.link">{{project.Name}}</a></h3>
+      <h3><a [routerLink]="['ProjectDetail', {id: project.ID}]">{{project.Name}}</a></h3>
       {{project.Details}}
+      <br>
+      <a [href]="project.Link" target="_balnk">View</a>
     </li>
   </ul>
 </div>
