@@ -3,8 +3,6 @@ import {Router, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {ProjectList} from '../project-list/project-list';
 
-var config = require('../../config/config');
-
 @Component({
   selector: 'project-browser',
   template: require("./project-browser.html"),

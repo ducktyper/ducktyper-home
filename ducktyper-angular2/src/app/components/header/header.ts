@@ -1,7 +1,5 @@
 ﻿import {Component} from 'angular2/core'; 
 
-var config = require('../../config/config');
-
 @Component({
   selector: 'header',
   template: require("./header.html"),

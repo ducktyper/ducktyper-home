@@ -3,8 +3,6 @@ import {Title} from 'angular2/platform/browser';
 
 import {ProjectRepo} from '../../services/project-repo';
 
-var config = require('../../config/config');
-
 @Component({
   selector: 'project',
   template: require("./project-list.html"),
