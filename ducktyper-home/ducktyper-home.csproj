@@ -101,6 +101,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605010310382_CreateProjects.cs" />
+    <Compile Include="Migrations\201605010310382_CreateProjects.Designer.cs">
+      <DependentUpon>201605010310382_CreateProjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DucktyperHomeContext.cs" />
     <Compile Include="Models\Project.cs" />
@@ -118,6 +122,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605010310382_CreateProjects.resx">
+      <DependentUpon>201605010310382_CreateProjects.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
