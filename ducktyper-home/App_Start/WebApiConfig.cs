@@ -22,6 +22,11 @@ namespace ducktyper_home
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Routes.MapHttpRoute(
+                name: "Default",
+                routeTemplate: "{*uri}",
+                defaults: new { controller = "Home", action = "Index" }
+            );
         }
     }
 }
