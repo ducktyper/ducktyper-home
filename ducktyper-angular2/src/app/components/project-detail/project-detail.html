@@ -1,6 +1,9 @@
-<div class="content project-detail">
+<div class="content">
   <h2>{{project.Name}}</h2>
-  <p>{{project.Details}}</p>
+  <div class="project-detail">
+    <h3>{{project.Details}}</h3>
+    <div [innerHTML]="project.Body"></div>    
+  </div>
   <br>
   <a [routerLink]="['ProjectList']">Back to the list</a>
 </div>

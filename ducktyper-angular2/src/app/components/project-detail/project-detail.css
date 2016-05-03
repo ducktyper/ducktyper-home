@@ -1,4 +1,4 @@
-.project-detail {
+.content {
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -10,8 +10,9 @@ h2 {
   background-color: #6ae;
   color: #fff;
 }
-p {
-  padding: 1em;
+.project-detail {
+  padding-left: 1em;
+  padding-right: 1em;
   margin: 0;
   border: 1px solid #ddd;
 }
