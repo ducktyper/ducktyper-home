@@ -16,3 +16,14 @@ h2 {
   margin: 0;
   border: 1px solid #ddd;
 }
+.actions a {
+  background-color: #a8c;
+  padding: .3em .7em;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: .5em;
+  color: #fff;
+}
+.actions a:hover {
+  text-decoration: underline;
+}

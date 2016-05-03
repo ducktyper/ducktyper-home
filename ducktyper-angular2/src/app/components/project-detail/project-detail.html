@@ -2,8 +2,11 @@
   <h2>{{project.Name}}</h2>
   <div class="project-detail">
     <h3>{{project.Details}}</h3>
-    <div [innerHTML]="project.Body"></div>    
+    <div [innerHTML]="project.Body"></div>
   </div>
   <br>
-  <a [routerLink]="['ProjectList']">Back to the list</a>
+  <div class="actions">
+    <a [routerLink]="['ProjectList']">Back to the list</a>
+    <a [href]="project.Link" target="_balnk">Visit</a>
+  </div>
 </div>
