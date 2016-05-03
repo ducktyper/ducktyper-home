@@ -11,5 +11,6 @@ namespace ducktyper_home.Models
         public string Name { get; set; }
         public string Details { get; set; }
         public string Link { get; set; }
+        public string Body { get; set; }
     }
 }
