@@ -5,7 +5,7 @@ import {RouterLink} from 'angular2/router';
 import {ProjectRepo} from '../../services/project-repo';
 
 @Component({
-  selector: 'project',
+  selector: 'project-list',
   template: require("./project-list.html"),
   styles: [require("./project-list.css")],
   providers: [Title, ProjectRepo],
