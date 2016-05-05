@@ -25,3 +25,14 @@
 .project-list li:first-child {
   border-top: none;
 }
+.project h3 a {
+  color: #128;
+  text-decoration: none;
+}
+.project h3 a:visited {
+  color: #369;
+}
+.project h3 a:hover {
+  color: #58b;
+  text-decoration: underline;
+}
