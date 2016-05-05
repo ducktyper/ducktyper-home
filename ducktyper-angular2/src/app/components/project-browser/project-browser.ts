@@ -7,6 +7,7 @@ import {ProjectDetail} from '../project-detail/project-detail';
 @Component({
   selector: 'project-browser',
   template: require("./project-browser.html"),
+  styles: [require("./project-browser.css")],
   directives: [ROUTER_DIRECTIVES],
 })
 @RouteConfig([

@@ -1,0 +1,25 @@
+.about-me {
+  margin-top: 1em;
+}
+.about-me h2 {
+  padding: .5em;
+  margin: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #6ae;
+  color: #fff;
+}
+.about-me img {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 1em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+}
+.about-me p {
+  padding: 1em;
+  margin: 0;
+  border: 1px solid #ddd;
+  display: table;
+}
