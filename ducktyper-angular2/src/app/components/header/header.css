@@ -7,3 +7,7 @@
 .name {
   padding: 1em;
 }
+.links {
+  padding: 1em;
+  float: right;
+}
