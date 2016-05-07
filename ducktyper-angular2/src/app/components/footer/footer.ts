@@ -1,9 +1,9 @@
-import {Component} from 'angular2/core'; 
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'footer',
-  template: require("./footer.html"),
-  styles: [require("./footer.css")],
+  templateUrl: "/app/components/footer/footer.html",
+  styleUrls: ["app/components/footer/footer.css"],
 })
 export class Footer {
 }

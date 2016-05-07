@@ -1,14 +1,13 @@
-import {Injectable}     from 'angular2/core';
-import {Http, Response} from 'angular2/http';
+import {Injectable}     from '@angular/core';
+import {Http, Response} from '@angular/http';
 import {Observable}     from 'rxjs/Observable'
-
-var config = require('../config/config');
+import {environment}    from '../../app/';
 
 @Injectable()
 export class ProjectRepo {
   constructor(private http:Http) {}
   
-  private getProjectsUrl = `${config.apiHost}api/projects`;
+  private getProjectsUrl = `${environment.apiHost}api/projects`;
   
   getProjects() {
     return this.http.get(this.getProjectsUrl)

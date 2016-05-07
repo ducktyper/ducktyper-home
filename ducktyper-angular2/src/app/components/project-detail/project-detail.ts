@@ -1,24 +1,24 @@
-import {Component} from 'angular2/core';
-import {Title} from 'angular2/platform/browser';
-import {RouteParams, RouterLink} from 'angular2/router';
+import {Component} from '@angular/core';
+import {ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
+import {Title} from '@angular/platform-browser';
 
 import {ProjectRepo} from '../../services/project-repo';
 
 @Component({
   selector: 'project-detail',
-  template: require("./project-detail.html"),
-  styles: [require("./project-detail.css")],
+  templateUrl: "/app/components/project-detail/project-detail.html",
+  styleUrls: ["app/components/project-detail/project-detail.css"],
+  directives: [ROUTER_DIRECTIVES],
   providers: [Title, ProjectRepo],
-  directives: [RouterLink],
 })
 export class ProjectDetail {
   project: any;
   
-  constructor(private title:Title, private projectRepo:ProjectRepo, private routeParams: RouteParams) {}
+  constructor(private title:Title, private projectRepo:ProjectRepo, private routeSegment: RouteSegment) {}
 
   ngOnInit() {
     this.title.setTitle("Ducktyper: Product Detail");
-    let id = +this.routeParams.get('id');
+    let id = +this.routeSegment.getParam('id');
     this.project = {};
     this.getProject(id);
   }

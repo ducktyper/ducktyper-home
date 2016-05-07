@@ -188,6 +188,32 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 
-# Custom
-/ducktyper-angular2/typings/
-/ducktyper-angular2/dist/
+# Angular2
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/ducktyper-angular2/dist
+/ducktyper-angular2/tmp
+
+# dependencies
+/ducktyper-angular2/node_modules
+/ducktyper-angular2/bower_components
+
+# IDEs and editors
+/ducktyper-angular2/.idea
+
+# misc
+/ducktyper-angular2/.sass-cache
+/ducktyper-angular2/connect.lock
+/ducktyper-angular2/coverage/*
+/ducktyper-angular2/libpeerconnection.log
+npm-debug.log
+testem.log
+/ducktyper-angular2/typings
+
+# e2e
+/ducktyper-angular2/e2e/*.js
+/ducktyper-angular2/e2e/*.map
+
+#System Files
+.DS_Store
