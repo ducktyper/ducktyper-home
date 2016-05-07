@@ -1,10 +1,10 @@
 import {Injectable}     from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Observable}     from 'rxjs/Observable'
-import {environment}    from '../../app/';
+import {environment}    from './environment';
 
 @Injectable()
-export class ProjectRepo {
+export class ProjectRepoService {
   constructor(private http:Http) {}
   
   private getProjectsUrl = `${environment.apiHost}api/projects`;

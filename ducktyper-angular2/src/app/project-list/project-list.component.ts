@@ -2,18 +2,18 @@ import {Component} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
-import {ProjectRepo} from '../services/project-repo';
+import {ProjectRepoService} from '../project-repo.service';
 
 @Component({
   selector: 'project-list',
   templateUrl: "/app/project-list/project-list.component.html",
   styleUrls: ["app/project-list/project-list.component.css"],
   directives: [ROUTER_DIRECTIVES],
-  providers: [Title, ProjectRepo],
+  providers: [Title, ProjectRepoService],
 })
 export class ProjectListComponent {
   projects: Array<any>
-  constructor(private title:Title, private projectRepo:ProjectRepo) {}
+  constructor(private title:Title, private projectRepoService:ProjectRepoService) {}
 
   ngOnInit() {
     this.title.setTitle("Ducktyper: Product List");
@@ -21,7 +21,7 @@ export class ProjectListComponent {
   }
 
   getProjects() {
-    this.projectRepo
+    this.projectRepoService
         .getProjects()
         .subscribe(projects => this.projects = projects);
   }

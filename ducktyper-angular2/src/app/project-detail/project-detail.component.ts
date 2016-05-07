@@ -2,19 +2,19 @@ import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 
-import {ProjectRepo} from '../services/project-repo';
+import {ProjectRepoService} from '../project-repo.service';
 
 @Component({
   selector: 'project-detail',
   templateUrl: "/app/project-detail/project-detail.component.html",
   styleUrls: ["app/project-detail/project-detail.component.css"],
   directives: [ROUTER_DIRECTIVES],
-  providers: [Title, ProjectRepo],
+  providers: [Title, ProjectRepoService],
 })
 export class ProjectDetailComponent {
   project: any;
   
-  constructor(private title:Title, private projectRepo:ProjectRepo, private routeSegment: RouteSegment) {}
+  constructor(private title:Title, private projectRepoService:ProjectRepoService, private routeSegment: RouteSegment) {}
 
   ngOnInit() {
     this.title.setTitle("Ducktyper: Product Detail");
@@ -24,7 +24,7 @@ export class ProjectDetailComponent {
   }
     
   getProject(id:number) {
-    this.projectRepo
+    this.projectRepoService
         .getProjects()
         .subscribe(projects => this.project = projects.filter(project => project.ID === id)[0]);
   }
