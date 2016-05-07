@@ -1,2 +1,2 @@
 export {environment} from './environment';
-export {DucktyperHome} from './ducktyper-home';
+export {DucktyperHomeComponent} from './ducktyper-home.component';

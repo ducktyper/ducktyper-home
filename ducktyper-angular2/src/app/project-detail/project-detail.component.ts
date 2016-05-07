@@ -2,16 +2,16 @@ import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 
-import {ProjectRepo} from '../../services/project-repo';
+import {ProjectRepo} from '../services/project-repo';
 
 @Component({
   selector: 'project-detail',
-  templateUrl: "/app/components/project-detail/project-detail.html",
-  styleUrls: ["app/components/project-detail/project-detail.css"],
+  templateUrl: "/app/project-detail/project-detail.component.html",
+  styleUrls: ["app/project-detail/project-detail.component.css"],
   directives: [ROUTER_DIRECTIVES],
   providers: [Title, ProjectRepo],
 })
-export class ProjectDetail {
+export class ProjectDetailComponent {
   project: any;
   
   constructor(private title:Title, private projectRepo:ProjectRepo, private routeSegment: RouteSegment) {}
