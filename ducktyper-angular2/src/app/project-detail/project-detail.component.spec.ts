@@ -10,9 +10,17 @@ import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testin
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import {Title} from '@angular/platform-browser';
-import {RouteSegment, Router} from '@angular/router';
+import {
+  Router,
+  RouterOutletMap,
+  RouterUrlSerializer,
+  DefaultRouterUrlSerializer,
+  RouteSegment,
+} from '@angular/router';
+import {Location} from '@angular/common';
+import {SpyLocation} from '@angular/common/testing';
 import {MockBackend} from '@angular/http/testing';
-import {provide} from '@angular/core';
+import {provide, ComponentResolver} from '@angular/core';
 import {
   Http,
   ConnectionBackend,
@@ -29,6 +37,15 @@ describe('Component: ProjectDetail', () => {
   beforeEachProviders(() => [
     ProjectDetailComponent,
     Title,
+    RouterOutletMap,
+    provide(Location, {useClass: SpyLocation}),
+    provide(RouterUrlSerializer, {useClass: DefaultRouterUrlSerializer}),
+    provide(Router,
+      {
+        useFactory: (resolver, urlParser, outletMap, location) => new Router(
+          "RootComponent", ProjectDetailComponent, resolver, urlParser, outletMap, location),
+        deps: [ComponentResolver, RouterUrlSerializer, RouterOutletMap, Location]
+      }),
     provide(RouteSegment, {useFactory: (r) => r.routeTree.root, deps: [Router]}),
     ProjectRepoService,
     BaseRequestOptions,
