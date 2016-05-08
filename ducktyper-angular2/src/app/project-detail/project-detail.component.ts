@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
 import {Title} from '@angular/platform-browser';
+import {HTTP_PROVIDERS} from '@angular/http';
 
 import {ProjectRepoService} from '../project-repo.service';
 
@@ -10,7 +11,7 @@ import {ProjectRepoService} from '../project-repo.service';
   templateUrl: "project-detail.component.html",
   styleUrls: ["project-detail.component.css"],
   directives: [ROUTER_DIRECTIVES],
-  providers: [Title, ProjectRepoService],
+  providers: [HTTP_PROVIDERS, Title, ProjectRepoService],
 })
 export class ProjectDetailComponent implements OnInit {
   project: any;

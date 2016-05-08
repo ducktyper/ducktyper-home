@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {ROUTER_DIRECTIVES} from '@angular/router';
+import {HTTP_PROVIDERS} from '@angular/http';
 
 import {ProjectRepoService} from '../project-repo.service';
 
@@ -10,7 +11,7 @@ import {ProjectRepoService} from '../project-repo.service';
   templateUrl: "project-list.component.html",
   styleUrls: ["project-list.component.css"],
   directives: [ROUTER_DIRECTIVES],
-  providers: [Title, ProjectRepoService],
+  providers: [HTTP_PROVIDERS, Title, ProjectRepoService],
 })
 export class ProjectListComponent implements OnInit {
   projects: Array<any>
