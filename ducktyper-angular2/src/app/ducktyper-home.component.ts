@@ -8,9 +8,10 @@ import {ProjectListComponent} from './project-list/project-list.component';
 import {AboutMeComponent} from './about-me/about-me.component';
 
 @Component({
+  moduleId: module.id,
   selector: 'ducktyper-home',
-  templateUrl: "/app/ducktyper-home.component.html",
-  styleUrls: ["app/ducktyper-home.component.css"],
+  templateUrl: "ducktyper-home.component.html",
+  styleUrls: ["ducktyper-home.component.css"],
   directives: [HeaderComponent, FooterComponent, AboutMeComponent, ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None, 
 })

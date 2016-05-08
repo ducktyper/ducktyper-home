@@ -5,9 +5,10 @@ import {Title} from '@angular/platform-browser';
 import {ProjectRepoService} from '../project-repo.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'project-detail',
-  templateUrl: "/app/project-detail/project-detail.component.html",
-  styleUrls: ["app/project-detail/project-detail.component.css"],
+  templateUrl: "project-detail.component.html",
+  styleUrls: ["project-detail.component.css"],
   directives: [ROUTER_DIRECTIVES],
   providers: [Title, ProjectRepoService],
 })

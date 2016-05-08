@@ -5,9 +5,10 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 import {ProjectRepoService} from '../project-repo.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'project-list',
-  templateUrl: "/app/project-list/project-list.component.html",
-  styleUrls: ["app/project-list/project-list.component.css"],
+  templateUrl: "project-list.component.html",
+  styleUrls: ["project-list.component.css"],
   directives: [ROUTER_DIRECTIVES],
   providers: [Title, ProjectRepoService],
 })
