@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 
@@ -12,7 +12,7 @@ import {ProjectRepoService} from '../project-repo.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [Title, ProjectRepoService],
 })
-export class ProjectDetailComponent {
+export class ProjectDetailComponent implements OnInit {
   project: any;
   
   constructor(private title:Title, private projectRepoService:ProjectRepoService, private routeSegment: RouteSegment) {}

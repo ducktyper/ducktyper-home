@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
@@ -12,7 +12,7 @@ import {ProjectRepoService} from '../project-repo.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [Title, ProjectRepoService],
 })
-export class ProjectListComponent {
+export class ProjectListComponent implements OnInit {
   projects: Array<any>
   constructor(private title:Title, private projectRepoService:ProjectRepoService) {}
 
