@@ -217,3 +217,9 @@ testem.log
 
 #System Files
 .DS_Store
+
+# Deploy files
+/ducktyper-home/app
+/ducktyper-home/vendor
+/ducktyper-home/main.js
+/ducktyper-home/system-config.js
