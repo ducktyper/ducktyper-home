@@ -19,6 +19,6 @@ import {AboutMeComponent} from './about-me/about-me.component';
   { path: '/', component: ProjectListComponent },
   { path: '/Project/:id', component: ProjectDetailComponent },
 ])
-export class DucktyperHomeComponent {
+export class DucktyperHomeAppComponent {
   constructor(private _router:Router) { }
 }
