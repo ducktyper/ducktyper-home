@@ -11,6 +11,7 @@
     "format": "clang-format -i -style=file --glob=src/**/*.ts",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
+    "start": "ng serve -p 4010",
     "deploy": "ng build && node deploy/s3_upload.js"
   },
   "private": true,
