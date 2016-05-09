@@ -1,6 +1,7 @@
 <div class="content project-list">
   <h2>Project List</h2>
   <ul>
+    <li class="loading" *ngIf="projects.length === 0">Loading ...</li>
     <li class="project" *ngFor="let project of projects">
       <h3><a [routerLink]="['/Project', project.ID]">{{project.Name}}</a></h3>
       {{project.Details}}

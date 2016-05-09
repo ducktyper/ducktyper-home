@@ -14,7 +14,7 @@ import {ProjectRepoService} from '../project-repo.service';
   providers: [HTTP_PROVIDERS, Title, ProjectRepoService],
 })
 export class ProjectListComponent implements OnInit {
-  projects: Array<any>
+  projects: Array<any> = [];
   constructor(private title:Title, private projectRepoService:ProjectRepoService) {}
 
   ngOnInit() {
