@@ -19,7 +19,7 @@ export class ProjectDetailComponent implements OnInit {
   constructor(private title:Title, private projectRepoService:ProjectRepoService, private routeSegment: RouteSegment) {}
 
   ngOnInit() {
-    this.title.setTitle("Ducktyper: Product Detail");
+    this.title.setTitle("Ducktyper: Project Detail");
     let id = +this.routeSegment.getParam('id');
     this.project = {};
     this.getProject(id);

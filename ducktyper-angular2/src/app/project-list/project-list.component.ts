@@ -18,7 +18,7 @@ export class ProjectListComponent implements OnInit {
   constructor(private title:Title, private projectRepoService:ProjectRepoService) {}
 
   ngOnInit() {
-    this.title.setTitle("Ducktyper: Product List");
+    this.title.setTitle("Ducktyper: Project List");
     this.getProjects();
   }
 
